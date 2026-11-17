@@ -34,3 +34,32 @@
 .menu a:hover{
     border-bottom: 1px solid aliceblue;
 }
+.Container{
+    height: 120vh;
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 10px;
+}
+.cards{
+    height: 350px;
+    width: 250px;
+    border: 2px solid ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.cards p{
+    text-align: center;
+}
+.cards img{
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+}
+

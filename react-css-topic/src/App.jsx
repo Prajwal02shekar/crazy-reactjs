@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
 import './global.css'
+import ProfileCards from './ProfileCards'
+import Navbar2 from './Navbar2'
+import ProductCards from './ProductCards'
 
 const App = () => {
     return (
@@ -12,6 +15,9 @@ const App = () => {
 
         <div>
             <Navbar/>
+            <ProfileCards/>
+            <Navbar2/>
+            <ProductCards/>
         </div>
     )
 }
