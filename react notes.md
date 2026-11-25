@@ -281,3 +281,143 @@ CSS is used to apply colours and effects to web pages. In React, CSS can be adde
 - The file must have the `.module.css` extension, e.g. `filename.module.css`
 
 ---
+
+## 16. Refs
+
+- Refs are references
+- Refs are an inbuilt object in React JS
+- By default a ref contains the key-value pair `{ current: undefined }`
+- Used to target JSX elements in React JS
+- Refs always use the **Real DOM**
+- In CBC we use `createRef`
+- In FBC we use `useRef`
+- Do not overuse refs
+
+### Practical Usage of Refs
+
+- Form handling
+- Animations
+- Media tags
+
+---
+
+## 17. Forms
+
+- Forms are used to collect user information
+- There are 2 types of forms:
+  1. Controlled forms
+  2. Uncontrolled forms
+- Both types can be built in CBC and FBC
+
+### 1. Controlled Forms
+
+Forms developed using `onChange()` and **state**.
+
+### 2. Uncontrolled Forms
+
+Forms developed using **refs**.
+
+---
+
+## 18. Context API
+
+- Props drilling is the process of sending data from one component to another, then another, and so on
+- What if we have thousands of components?
+- To solve this problem, the **Context API** came into the picture
+- It sends data directly, without the help of intermediate components
+
+### Steps
+
+1. Create the context – `createContext()`
+2. Provider
+3. Consumer / `useContext()` hook
+
+**Step 1:**
+- Import `createContext` from React
+- Use the `createContext()` method; it returns a context object that can be used to provide and consume values
+
+**Step 2:**
+- Use the `<ContextName.Provider></ContextName.Provider>` component
+- Wrap all the child components to which you want to send the data
+- Data is passed through the `value` prop
+- The data can now be consumed by the wrapped components and their children, grandchildren, and so on
+
+**Step 3:**
+- Use the `useContext()` hook to directly consume the value
+
+---
+
+## 19. Higher Order Component (HOC)
+
+- A HOC is a component (function) that receives another component as an argument and returns a new component
+- It is an alternative for props drilling
+- The HOC returns a function, in which we specify what to render in the UI using the `return` keyword
+
+---
+
+## 20. `useEffect()` Hook
+
+- Used to control **side effects** in React components
+- Side effects can be fetching data, directly updating something in the DOM, or timers
+- `useEffect` accepts two arguments:
+  1. Function
+  2. Dependency array
+- React keeps track of the variables present in the dependency array; if any of them change, it invokes the function
+
+---
+
+## 21. Axios
+
+- Axios lets us communicate with the server
+- It supports HTTP requests:
+
+| Method | Purpose |
+|--------|---------|
+| `GET` | Get / fetch data from the server |
+| `POST` | Send / create data |
+| `PUT` / `PATCH` | Modify data |
+| `DELETE` | Remove data |
+
+- Axios always returns a **promise**
+
+---
+
+## 22. Routing
+
+- Routing is the process of navigating between components through the URL, without a full page reload
+- It is used to create SPAs
+
+### Why Routing?
+
+- React helps us design SPAs, so we have only one web page
+- A React app consists of multiple components with different information
+- To navigate between these components, we use **react-router**
+
+### How to Use
+
+1. Install the routing library:
+   ```bash
+   npm install react-router-dom@latest
+   ```
+2. Import the necessary components from the library, such as `BrowserRouter`, `Routes`, `Route`, `Link` and `NavLink`, and use them in the React components to define routes.
+
+### Routing Components
+
+| Component | Description |
+|-----------|-------------|
+| `BrowserRouter` | Parent component that wraps the entire application and enables navigation using URLs |
+| `Routes` | Container for multiple `Route` components; displays the component that matches the current URL |
+| `Route` | Maps a URL path to a specific component |
+| `Link` | Used for navigation; changes the URL without reloading the page |
+| `NavLink` | Used for navigation; can automatically identify the active route, useful for menus and navbars |
+
+### Important Routing Hooks
+
+1. **`useNavigate()`** – used to navigate to another page after performing an action such as login, registration, form submission or a button click
+2. **`useLocation()`** – used to access details of the current route such as `pathname`, `state` and search parameters
+
+---
+
+**THANK YOU**
+
+*Prajwal C*
