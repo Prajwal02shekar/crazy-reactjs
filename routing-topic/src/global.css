@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 50px;
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.navbar .logo{
+    flex-basis: 15%;
+    color: aliceblue;
+}
+.navbar .menu{
+    flex-basis: 85%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu a{
+    color:black;
+    text-decoration: none;
+}
